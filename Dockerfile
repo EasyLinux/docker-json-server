@@ -1,12 +1,12 @@
-FROM node:latest
-MAINTAINER Christian Lück <christian@lueck.tv>
+FROM alpine:3.10
+LABEL author="Serge NOEL <serge.noel@easylinux.fr>"
 
-RUN npm install -g json-server
+RUN apk add npm \ 
+    && npm install -g json-server
 
 WORKDIR /data
 VOLUME /data
 
 EXPOSE 80
-ADD run.sh /run.sh
-ENTRYPOINT ["bash", "/run.sh"]
-CMD []
+ADD launch /usr/local/bin/launch
+CMD ["/usr/local/bin/launch"]
