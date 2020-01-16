@@ -34,7 +34,7 @@ This is a rather common setup following docker's conventions:
 You can supply any number of JSON Server arguments that will be passed through unmodified.
 
 ```bash
-$ docker run -it --rm clue/json-server --help
+$ docker run -it --rm easylinux/docker-json-server --help
 ```
 
 ### JSON source
