@@ -6,13 +6,13 @@ args="$@ -p 80"
 
 file=/data/db.json
 if [ -f $file ]; then
-    echo "Found db.json, trying to open"
+    echo "Un fichier db.json est présent"
     args="$args db.json"
 fi
 
 file=/data/file.js
 if [ -f $file ]; then
-    echo "Found file.js seed file, trying to open"
+    echo "Un fichier file.js est présent"
     args="$args file.js"
 fi
 
